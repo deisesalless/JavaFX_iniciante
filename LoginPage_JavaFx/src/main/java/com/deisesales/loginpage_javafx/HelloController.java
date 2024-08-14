@@ -2,9 +2,9 @@ package com.deisesales.loginpage_javafx;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.event.ActionEvent;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
 
 public class HelloController {
 
@@ -12,10 +12,10 @@ public class HelloController {
     private Label textoBemVindo;
 
     @FXML
-    private TextField txtUsuario;
+    private TextField txtNome;
 
     @FXML
-    void acaoBotao(ActionEvent event) {
-        textoBemVindo.setText("Olá mundo");
+    public void acaoBotao(ActionEvent event) {
+        textoBemVindo.setText("Olá mundo: " + txtNome.getText());
     }
 }
